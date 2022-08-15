@@ -15,7 +15,7 @@ python Fantasy_Baseball
 
 It will prompt you to type your league name, your username, and password. After that, it should load your league information and create graphs of your team's data from 
 
-As usualy, you should look over the script to be sure that your information is safe and not being hijacked by me or anyone else. 
+As usual, you should look over the script to be sure that your information is safe and not being hijacked by me or anyone else. 
 
 If you want, you can also set variables in your environment so you don't have to keep typing in league name, username, and passwords.
 Please only add a password variable to your account if it is unique and not used for anything else. Storing passwords as plain text in your .*profile* isn't the safest idea, so make sure it's unique. 
