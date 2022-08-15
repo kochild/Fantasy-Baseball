@@ -8,9 +8,9 @@ This is currently a work in progress, but the project scrapes data from the leag
 You just need to create a python environment from the requirements.txt file. 
 
 
-To execute the script, just type the following in the root directory of this repository:
+To execute the script, just type the following in the root directory of this repository in your terminal:
 ```
-python Fantasy_Baseball
+python Fantasy_Baseball/
 ```
 
 It will prompt you to type your league name, your username, and password. After that, it should load your league information and create graphs of your team's data from 
