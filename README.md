@@ -21,4 +21,4 @@ CBS_Password = your password for your CBS fantasy account.
 ```
 
 ![pitching](League/Pitching_stats_2022-08-15.png)
-![hitting](hitting_stats_2022-08-15.png)
+![hitting](League/hitting_stats_2022-08-15.png)
