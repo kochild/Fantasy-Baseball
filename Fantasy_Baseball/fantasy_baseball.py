@@ -106,7 +106,7 @@ def scoring_rules_hitting(h_stats):
     return h_stats
 
 def scoring_rules_pitching(p_stats):
-    "Points for our pitching stats. Change if needed"
+    """Points for our pitching stats. Change if needed"""
     cols=[i for i in p_stats.columns if i not in ["Team"]]
     for col in cols:
         p_stats[col]=pd.to_numeric(p_stats[col])
@@ -130,7 +130,7 @@ def scoring_rules_pitching(p_stats):
 
 def plot_bar(h_stats, p_stats):
     """Make charts and save csv"""
-    color = 'Accent'
+    color = 'Accent' #Any color under matplotlib will work
     h_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title('BAFBL2001 Hitting Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
