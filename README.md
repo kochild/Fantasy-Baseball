@@ -13,7 +13,7 @@ To execute the script, just type the following in the root directory of this rep
 python Fantasy_Baseball/
 ```
 
-It will prompt you to type your league name, your username, and password. After that, it should load your league information and create graphs of your team's data from 
+It will prompt you to type your league name, your username, and password. After that, it should load your league information and create graphs of your team's scoring page. This is currently specific to my league's scoring rules, so you'll want to match them with your league's scoring system. Edit scoring_rules_h_stats and p_stats to match your rules, or add to them if things don't match. 
 
 As usual, you should look over the script to be sure that your information is safe and not being hijacked by me or anyone else. 
 
