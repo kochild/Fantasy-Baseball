@@ -18,7 +18,7 @@ It will prompt you to type your league name, your username, and password. After 
 As usual, you should look over the script to be sure that your information is safe and not being hijacked by me or anyone else. 
 
 If you want, you can also set variables in your environment so you don't have to keep typing in league name, username, and passwords.
-Please only add a password variable to your account if it is unique and not used for anything else. Storing passwords as plain text in your .*profile* isn't the safest idea, so make sure it's unique. 
+Please only add a password variable of your account if it is unique and not used for anything else. Storing passwords as plain text in your .*profile* isn't the safest idea, so make sure it's unique. 
 
 ```
 league_name = your league name xxx.baseball.cbssports.com, where xxx is league name
