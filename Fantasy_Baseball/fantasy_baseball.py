@@ -1,3 +1,4 @@
+from cProfile import label
 import getpass
 import lxml.html
 import matplotlib
@@ -132,17 +133,18 @@ def plot_bar(h_stats, p_stats):
     league_name, _, _ = loadCBScreds() 
     league_name = league_name.upper()
     """Make charts and save csv"""
-    color = 'Accent' #Any color under matplotlib will work
+    color = 'RdYlGn_r' #Any color under matplotlib will work
     h_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title(league_name +' Hitting Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
-    plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
     plt.savefig('League/hitting_stats_' + time.strftime("%Y-%m-%d") + '.png',
                 bbox_inches='tight')
+    plt.clf()
     p_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title(league_name +' Pitching Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
-    plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
     plt.savefig('League/Pitching_stats_' + time.strftime("%Y-%m-%d") + '.png',
                 bbox_inches='tight')
     h_stats.to_csv('csv/hittings_stats_as_of ' + time.strftime("%m-%d-%Y") + '.csv')
