@@ -129,16 +129,18 @@ def scoring_rules_pitching(p_stats):
     return p_stats
 
 def plot_bar(h_stats, p_stats):
+    league_name, _, _ = loadCBScreds() 
+    league_name = league_name.upper()
     """Make charts and save csv"""
     color = 'Accent' #Any color under matplotlib will work
     h_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
-    plt.title('BAFBL2001 Hitting Stats as of ' + time.strftime("%m-%d-%Y"))
+    plt.title(league_name +' Hitting Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
     plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.savefig('League/hitting_stats_' + time.strftime("%Y-%m-%d") + '.png',
                 bbox_inches='tight')
     p_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
-    plt.title('BAFBL2001 Pitching Stats as of ' + time.strftime("%m-%d-%Y"))
+    plt.title(league_name +' Pitching Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
     plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.savefig('League/Pitching_stats_' + time.strftime("%Y-%m-%d") + '.png',
