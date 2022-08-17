@@ -5,7 +5,7 @@ This is currently a work in progress, but the project scrapes data from the leag
 
 # How to use
 
-You just need to create a python environment from the requirements.txt file. 
+You just need to create a python environment from the requirements.txt file. I'm using python 3.10, but any python version that installs from the requirement file should work.
 
 
 To execute the script, just type the following in the root directory of this repository in your terminal:
