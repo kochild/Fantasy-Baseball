@@ -1,4 +1,3 @@
-from cProfile import label
 import getpass
 import lxml.html
 import matplotlib
