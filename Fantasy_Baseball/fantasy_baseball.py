@@ -132,7 +132,9 @@ def plot_bar(h_stats, p_stats):
     league_name, _, _ = loadCBScreds() 
     league_name = league_name.upper()
     """Make charts and save csv"""
-    color = 'RdYlGn_r' #Any color under matplotlib will work
+    color = 'ocean' #Any color under matplotlib will work
+    h_stats = h_stats.reindex(h_stats.mean().sort_values().index, axis=1)
+    p_stats = p_stats.reindex(p_stats.mean().sort_values().index, axis=1)
     h_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title(league_name +' Hitting Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
@@ -149,3 +151,26 @@ def plot_bar(h_stats, p_stats):
     h_stats.to_csv('csv/hittings_stats_as_of ' + time.strftime("%m-%d-%Y") + '.csv')
     p_stats.to_csv('csv/pitching_stats_as_of '+ time.strftime("%m-%d-%Y") + '.csv')
 
+def plot_scoring_bar(h_stats, p_stats):
+    league_name, _, _ = loadCBScreds() 
+    league_name = league_name.upper()
+    """Make charts and save csv"""
+    color = 'hot' #Any color under matplotlib will work
+    h_stats = h_stats.reindex(h_stats.mean().sort_values().index, axis=1)
+    h_stats = h_stats.drop(['CS', 'E','GDP', 'HP', '3B', 'CSC'], axis=1)
+    p_stats = p_stats.drop(['B','CG', 'BS', 'H', 'HB', 'WP', 'PKO', 'NH', 'PG'], axis=1)
+    h_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
+    plt.title(league_name +' Hitting Scoring Stats as of ' + time.strftime("%m-%d-%Y"))
+    plt.xlabel('FTPS')
+    plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
+    plt.savefig('League/hitting_stats_scoring_' + time.strftime("%Y-%m-%d") + '.png',
+                bbox_inches='tight')
+    plt.clf()
+    p_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
+    plt.title(league_name +' Pitching Scoring Stats as of ' + time.strftime("%m-%d-%Y"))
+    plt.xlabel('FTPS')
+    plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
+    plt.savefig('League/Pitching_stats_scoring_' + time.strftime("%Y-%m-%d") + '.png',
+                bbox_inches='tight')
+    h_stats.to_csv('csv/hittings_scoring_stats_as_of ' + time.strftime("%m-%d-%Y") + '.csv')
+    p_stats.to_csv('csv/pitching_scoring_stats_as_of '+ time.strftime("%m-%d-%Y") + '.csv')
