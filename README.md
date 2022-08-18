@@ -26,5 +26,5 @@ CBS_USERNAME = your email address for your CBS fantasy account
 CBS_Password = your password for your CBS fantasy account.
 ```
 
-![pitching](League/Pitching_stats_2022-08-15.png)
-![hitting](League/hitting_stats_2022-08-15.png)
+![pitching](League/Pitching_stats_2022-08-17.png)
+![hitting](League/hitting_stats_2022-08-17.png)
