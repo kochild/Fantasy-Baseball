@@ -14,4 +14,5 @@ if __name__ == "__main__":
     h_stats = fb.scoring_rules_hitting(h_stats)
     p_stats = fb.scoring_rules_pitching(p_stats)
     fb.plot_bar(h_stats, p_stats)
-    fb.plot_scoring_bar(h_stats, p_stats)
+    #fb.plot_scoring_bar(h_stats, p_stats)
+    fb.league_statistics(h_stats, p_stats)

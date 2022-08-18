@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 import requests
+import scipy.stats as stats
 import time
 
 matplotlib.use
@@ -174,3 +175,45 @@ def plot_scoring_bar(h_stats, p_stats):
                 bbox_inches='tight')
     h_stats.to_csv('csv/hittings_scoring_stats_as_of ' + time.strftime("%m-%d-%Y") + '.csv')
     p_stats.to_csv('csv/pitching_scoring_stats_as_of '+ time.strftime("%m-%d-%Y") + '.csv')
+
+def league_statistics(h_stats, p_stats):
+    "Creates a pretty informative graph of where the league points come from"
+    #For Hitting
+    h_average = h_stats.mean(axis=0)
+    h_average = h_average.to_frame('Metrics') # Must do this because pandas object was just a series
+    #h_average = h_average['Metrics'].abs() # Converting to absolute values to describe major point changers
+    # https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/
+    h_average['colors'] = ['blue' if x < 0 else 'green' for x in h_average['Metrics']]
+    h_average.sort_values('Metrics', inplace=True)
+
+    # Plotting 
+    plt.figure(figsize=(8,8))
+    plt.hlines(y=h_average.index, xmin=0, xmax=h_average.Metrics, color=h_average.colors, alpha=0.4, linewidth=10)
+    # Decorations
+    plt.gca().set(ylabel='Scoring Metric', xlabel='Points')
+    plt.title('Average Hitting Points', fontdict={'size':20})
+    plt.grid(linestyle='--', alpha=0.5)
+    plt.savefig('League/Average_hitting_scores_' + time.strftime("%Y-%m-%d") + '.png',
+                bbox_inches='tight')
+    h_average.to_csv('csv/average_hitting_scores_' + time.strftime("%Y-%m-%d") + '.csv')
+    h_average.to_csv('csv/average_hitting_scores.csv')
+
+    #For pitching
+    p_average = p_stats.mean(axis=0)
+    p_average = p_average.to_frame('Metrics') # Must do this because pandas object was just a series
+    p_average['colors'] = ['blue' if x < 0 else 'green' for x in p_average['Metrics']]
+    p_average.sort_values('Metrics', inplace=True)
+ 
+    #Plotting Pitching
+    plt.figure(figsize=(8,8))
+    plt.hlines(y=p_average.index, xmin=0, xmax=p_average.Metrics, color=p_average.colors, alpha=0.4, linewidth=10)
+    # Decorations
+    plt.gca().set(ylabel='Scoring Metric', xlabel='Points')
+    plt.title('Average Pitching Points', fontdict={'size':20})
+    plt.grid(linestyle='--', alpha=0.5)
+    plt.savefig('League/Average_pitching_scores_' + time.strftime("%Y-%m-%d") + '.png',
+                bbox_inches='tight')
+    p_average.to_csv('csv/average_pitching_scores_' + time.strftime("%Y-%m-%d") + '.csv')
+    p_average.to_csv('csv/average_pitching_scores.csv')
+
+    return h_average, p_average
