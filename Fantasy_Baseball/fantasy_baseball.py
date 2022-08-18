@@ -140,15 +140,13 @@ def plot_bar(h_stats, p_stats):
     plt.title(league_name +' Hitting Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
     plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
-    plt.savefig('League/hitting_stats_' + time.strftime("%Y-%m-%d") + '.png',
-                bbox_inches='tight')
+    plt.savefig('League/hitting_stats_' + time.strftime("%Y-%m-%d") + '.png', bbox_inches='tight')
     plt.clf()
     p_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title(league_name +' Pitching Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
     plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
-    plt.savefig('League/Pitching_stats_' + time.strftime("%Y-%m-%d") + '.png',
-                bbox_inches='tight')
+    plt.savefig('League/Pitching_stats_' + time.strftime("%Y-%m-%d") + '.png', bbox_inches='tight')
     h_stats.to_csv('csv/hittings_stats_as_of ' + time.strftime("%m-%d-%Y") + '.csv')
     p_stats.to_csv('csv/pitching_stats_as_of '+ time.strftime("%m-%d-%Y") + '.csv')
 
@@ -164,15 +162,13 @@ def plot_scoring_bar(h_stats, p_stats):
     plt.title(league_name +' Hitting Scoring Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
     plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
-    plt.savefig('League/hitting_stats_scoring_' + time.strftime("%Y-%m-%d") + '.png',
-                bbox_inches='tight')
+    plt.savefig('League/hitting_stats_scoring_' + time.strftime("%Y-%m-%d") + '.png', bbox_inches='tight')
     plt.clf()
     p_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title(league_name +' Pitching Scoring Stats as of ' + time.strftime("%m-%d-%Y"))
     plt.xlabel('FTPS')
     plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
-    plt.savefig('League/Pitching_stats_scoring_' + time.strftime("%Y-%m-%d") + '.png',
-                bbox_inches='tight')
+    plt.savefig('League/Pitching_stats_scoring_' + time.strftime("%Y-%m-%d") + '.png', bbox_inches='tight')
     h_stats.to_csv('csv/hittings_scoring_stats_as_of ' + time.strftime("%m-%d-%Y") + '.csv')
     p_stats.to_csv('csv/pitching_scoring_stats_as_of '+ time.strftime("%m-%d-%Y") + '.csv')
 
@@ -193,8 +189,7 @@ def league_statistics(h_stats, p_stats):
     plt.gca().set(ylabel='Scoring Metric', xlabel='Points')
     plt.title('Average Hitting Points', fontdict={'size':20})
     plt.grid(linestyle='--', alpha=0.5)
-    plt.savefig('League/Average_hitting_scores_' + time.strftime("%Y-%m-%d") + '.png',
-                bbox_inches='tight')
+    plt.savefig('League/Average_hitting_scores_' + time.strftime("%Y-%m-%d") + '.png', bbox_inches='tight')
     h_average.to_csv('csv/average_hitting_scores_' + time.strftime("%Y-%m-%d") + '.csv')
     h_average.to_csv('csv/average_hitting_scores.csv')
 
@@ -211,8 +206,7 @@ def league_statistics(h_stats, p_stats):
     plt.gca().set(ylabel='Scoring Metric', xlabel='Points')
     plt.title('Average Pitching Points', fontdict={'size':20})
     plt.grid(linestyle='--', alpha=0.5)
-    plt.savefig('League/Average_pitching_scores_' + time.strftime("%Y-%m-%d") + '.png',
-                bbox_inches='tight')
+    plt.savefig('League/Average_pitching_scores_' + time.strftime("%Y-%m-%d") + '.png', bbox_inches='tight')
     p_average.to_csv('csv/average_pitching_scores_' + time.strftime("%Y-%m-%d") + '.csv')
     p_average.to_csv('csv/average_pitching_scores.csv')
 
