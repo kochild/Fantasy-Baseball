@@ -36,10 +36,10 @@ CBS_Password = your password for your CBS fantasy account.
 
 ![pitching_league](League/Average_pitching_scores_2022-08-18.png)
 
-So from this graph, we can tell most points in my league come from innings pitched and strickouts, a little bit from saves. Biggest loss of points are from hits.
+From this graph, we find that most points in my league come from innings pitched and strickouts, a little bit from saves. Biggest loss of points are from hits.
 
 ![hitting_league](League/Average_hitting_scores_2022-08-18.png)
 
-So from this graph, we can tell that singles, home runs, runs, RBIs, doubles, and BB are huge for points gained. Strikeouts are the leading cause of points lost. 
+From this graph, we find that hitting stats such as singles, home runs, runs, RBIs, doubles, and BB create most of the points. On the otherhand, strikeouts are the leading cause of points lost. 
 
 ## If anyone wants to help make this better, feel free to contribute :) 
