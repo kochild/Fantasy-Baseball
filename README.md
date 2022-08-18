@@ -26,5 +26,20 @@ CBS_USERNAME = your email address for your CBS fantasy account
 CBS_Password = your password for your CBS fantasy account.
 ```
 
+
+# Metrics of Each Team
+
 ![pitching](League/Pitching_stats_2022-08-18.png)
 ![hitting](League/hitting_stats_2022-08-18.png)
+
+# Metrics of League
+
+![pitching_league](League/Average_pitching_scores_2022-08-18.png)
+
+So from this graph, we can tell most points in my league come from innings pitched and strickouts, a little bit from saves. Biggest loss of points are from hits.
+
+![hitting_league](League/Average_hitting_scores_2022-08-18.png)
+
+So from this graph, we can tell that singles, homeruns, runes, RBIs, doubles, and BB are huge for points gained. Strikouts are the leading cause of losing points. 
+
+## If anyone wants to help make this better, feel free to contribute :) 
