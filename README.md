@@ -10,7 +10,7 @@ You just need to create a python environment from the requirements.txt file. I'm
 
 To execute the script, just type the following in the root directory of this repository in your terminal:
 ```
-python Fantasy_Baseball/
+python Fantasy_Baseball
 ```
 
 It will prompt you to type your league name, your username, and password. After that, it should load your league information and create graphs of your team's scoring page. This is currently specific to my league's scoring rules, so you'll want to match them with your league's scoring system. Edit scoring_rules_h_stats and p_stats to match your rules, or add to them if things don't match. 
@@ -26,5 +26,5 @@ CBS_USERNAME = your email address for your CBS fantasy account
 CBS_Password = your password for your CBS fantasy account.
 ```
 
-![pitching](League/Pitching_stats_2022-08-15.png)
-![hitting](League/hitting_stats_2022-08-15.png)
+![pitching](League/Pitching_stats_2022-08-17.png)
+![hitting](League/hitting_stats_2022-08-17.png)
