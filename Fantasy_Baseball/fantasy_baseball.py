@@ -138,12 +138,14 @@ def plot_bar(h_stats, p_stats):
     p_stats = p_stats.reindex(p_stats.mean().sort_values().index, axis=1)
     h_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title(league_name +' Hitting Stats as of ' + time.strftime("%m-%d-%Y"))
+    plt.grid(linestyle='--', alpha=0.5)
     plt.xlabel('FTPS')
     plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
     plt.savefig('League/hitting_stats_' + time.strftime("%Y-%m-%d") + '.png', bbox_inches='tight')
     plt.clf()
     p_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title(league_name +' Pitching Stats as of ' + time.strftime("%m-%d-%Y"))
+    plt.grid(linestyle='--', alpha=0.5)
     plt.xlabel('FTPS')
     plt.gca().legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon = False)
     plt.savefig('League/Pitching_stats_' + time.strftime("%Y-%m-%d") + '.png', bbox_inches='tight')
@@ -156,7 +158,6 @@ def plot_scoring_bar(h_stats, p_stats):
     """Make charts and save csv"""
     color = 'hot' #Any color under matplotlib will work
     h_stats = h_stats.reindex(h_stats.mean().sort_values().index, axis=1)
-    h_stats = h_stats.drop(['CS', 'E','GDP', 'HP', '3B', 'CSC'], axis=1)
     p_stats = p_stats.drop(['B','CG', 'BS', 'H', 'HB', 'WP', 'PKO', 'NH', 'PG'], axis=1)
     h_stats.plot.barh(stacked=True, colormap = color, figsize=(8, 10))
     plt.title(league_name +' Hitting Scoring Stats as of ' + time.strftime("%m-%d-%Y"))
