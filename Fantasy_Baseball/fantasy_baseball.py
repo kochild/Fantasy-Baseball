@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 import requests
-import scipy.stats as stats
 import time
 
 matplotlib.use
@@ -211,4 +210,5 @@ def league_statistics(h_stats, p_stats):
     p_average.to_csv('csv/average_pitching_scores_' + time.strftime("%Y-%m-%d") + '.csv')
     p_average.to_csv('csv/average_pitching_scores.csv')
 
-    return h_average, p_average
+    return h_average, p_average #keeping these as outputs because they might be useful one day.
+
