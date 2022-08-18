@@ -40,6 +40,6 @@ So from this graph, we can tell most points in my league come from innings pitch
 
 ![hitting_league](League/Average_hitting_scores_2022-08-18.png)
 
-So from this graph, we can tell that singles, home runs, runs, RBIs, doubles, and BB are huge for points gained. Strikeouts are the leading cause of losing points. 
+So from this graph, we can tell that singles, home runs, runs, RBIs, doubles, and BB are huge for points gained. Strikeouts are the leading cause of points lost. 
 
 ## If anyone wants to help make this better, feel free to contribute :) 
